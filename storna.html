@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wakacyjne Oferty – Praga</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f2f9ff;
+      background-image: url('https://cdn-icons-png.freepik.com/512/2926/2926731.png');
+      background-repeat: repeat;
+      background-size: 120px;
+      background-attachment: fixed;
+      color: #333;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    .hearts-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .heart {
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='%23ff69b4' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/%3E%3C/svg%3E") no-repeat center/contain;
+      opacity: 0.3;
+      animation: floatUp 15s infinite linear;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(100vh) scale(0.5);
+        opacity: 0.1;
+      }
+      50% {
+        opacity: 0.3;
+      }
+      100% {
+        transform: translateY(-10vh) scale(1);
+        opacity: 0;
+      }
+    }
+
+    header {
+      background: #00aaff;
+      padding: 20px;
+      color: white;
+      text-align: center;
+      font-size: 1.8em;
+      font-weight: bold;
+      z-index: 1;
+      position: relative;
+    }
+
+    nav {
+      background: #008ecc;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      z-index: 1;
+      position: relative;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1601831227160-e4e2b4a3d8de') center/cover no-repeat;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+      font-size: 2.5em;
+      z-index: 1;
+      position: relative;
+    }
+
+    .offers {
+      display: flex;
+      justify-content: center;
+      padding: 40px;
+      z-index: 1;
+      position: relative;
+    }
+
+    .card {
+      position: relative;
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      width: 400px;
+      height: 500px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .card-content h3 {
+      margin-top: 0;
+      color: #0077aa;
+      font-size: 1.6em;
+    }
+
+    .card-content p {
+      font-size: 1em;
+      color: #444;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba(0, 119, 170, 0.95);
+      color: white;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 30px 20px;
+      text-align: center;
+      transition: opacity 0.4s ease;
+      box-sizing: border-box;
+    }
+
+    .card:hover .overlay {
+      opacity: 1;
+    }
+
+    .overlay h4 {
+      margin: 10px 0 15px;
+      font-size: 1.8em;
+    }
+
+    .overlay p {
+      margin: 6px 0;
+      font-size: 1.1em;
+      line-height: 1.5;
+    }
+
+    footer {
+      background: #0077aa;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      z-index: 1;
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ANIMOWANE SERDUSZKA W TLE -->
+  <div class="hearts-background">
+    <div class="heart" style="left: 5%; animation-delay: 0s;"></div>
+    <div class="heart" style="left: 20%; animation-delay: 5s;"></div>
+    <div class="heart" style="left: 35%; animation-delay: 10s;"></div>
+    <div class="heart" style="left: 50%; animation-delay: 2s;"></div>
+    <div class="heart" style="left: 65%; animation-delay: 8s;"></div>
+    <div class="heart" style="left: 80%; animation-delay: 1s;"></div>
+    <div class="heart" style="left: 90%; animation-delay: 6s;"></div>
+  </div>
+
+  <header>
+    🌍 Wakacyjne Oferty – Praga
+  </header>
+
+  <nav>
+    <a href="#">Strona Główna</a>
+    <a href="#">Oferty</a>
+    <a href="#">Kontakt</a>
+  </nav>
+
+  <div class="hero">
+    Odkryj uroki Pragi!
+  </div>
+
+  <section class="offers">
+    <div class="card">
+      <img src="https://zwiedzajzemna.pl/wp-content/uploads/2017/09/iStock-599882452.jpg" />
+      <div class="card-content">
+        <h3>Praga, Czechy</h3>
+        <p>Niezapomniane 2 dni w sercu Europy. Poznaj klimat starego miasta i czeskiej kuchni!</p>
+      </div>
+      <div class="overlay">
+        <h4>Oferta: Praga</h4>
+        <p>📅 Oferta dla par - weekend 27-29.06</p>
+        <p>🏨 Apartament 4 gwiazdkowy w cenie</p>
+        <p>🥐 Codzienne śniadania w cenie</p>
+	<p>💆 Masaż na miejscu przez  Wykfalifikowanego masażyste "Pitera Cutryba" w cenie
+        <p>🚌 Dojazd przez prywatnego szofera w cenie</p>
+        <p>💶 Cena: 3 buziaki</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 wakacjedlamojejdziewczyny.pl
+  </footer>
+
+</body>
+</html>
